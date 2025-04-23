@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background: #f9f9ff;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .top-bar {
@@ -19,13 +21,27 @@ body {
     gap: 100px;
     padding: 20px;
 }
+
+@media (max-width: 768px) {
+    .grid-container {
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
 section {
     background: rgb(255, 255, 255);
-    padding: 0px 200px;
+    padding: 0px 20%;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
 }
+
+@media (max-width: 768px) {
+    section {
+        padding: 0 20px;
+    }
+}
+
 button {
     display: block;
     background-color: #8f7ace;
@@ -45,7 +61,8 @@ h2 {
 }
 
 .goal-bar {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 100px;
     margin-bottom: 10px;         
     margin-left: auto;  
