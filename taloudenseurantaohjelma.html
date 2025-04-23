@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
-<title>Taloudenseurantaohjelma</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taloudenseurantaohjelma</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body>
+    <header>
+        <div class="top-bar">
+            <span class="month">Tammikuu 2025 ▼</span>
+            <h1>Taloudenseurantaohjelma</h1>
+            <div class="profile-icon">👤</div>
+        </div>
+    </header>
 
-<h1>Taloudenseurantaohjelma</h1>
-<p>Heipähei!</p>
-
+    <main class="grid-container">
+        <section class="income">
+          <h2>Kuukauden tulot</h2>
+          <ul>
+            <li>2500€ <span>Palkka ✎</span></li>
+            <li>20€ <span>Muu ✎</span></li>
+          </ul>
+          <button>Lisää tulo</button>
+        </section>
+    
+        <section class="expenses">
+          <h2>Kuukauden menot</h2>
+          <ul>
+            <li>630€ Vuokra ✎</li>
+            <li>220€ Ruoka ✎</li>
+            <li>200€ Laskut ✎</li>
+            <li>50€ Harrastus ✎</li>
+            <li>300€ Auto ✎</li>
+            <li>200€ Muu ✎</li>
+          </ul>
+          <button>Lisää meno</button>
+        </section>
+    
+        <section class="summary">
+          <h2>Yhteenveto</h2>
+          <p>Tulot: 2520€</p>
+          <p>Menot: 1600€</p>
+          <p>Kuun tilanne: <strong style="color: green;">+920€</strong></p>
+          <canvas id="pieChart"></canvas>
+        </section>
+    </main>
+    <main class="grid-container">
+        <section class="savings">
+          <h2>Säästötavoitteet</h2>
+          <div class="goal-bar">
+            <span>Uusi auto +</span>
+            <progress value="2100" max="4200"></progress>
+          </div>
+          <button>Lisää säästötavoite</button>
+        </section>
+    
+        <section class="monthly-summary">
+          <h2>Kuukausittainen yhteenveto</h2>
+          <canvas id="barChart"></canvas>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
