@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['Syyskuu 2024', 'Lokakuu 2024', 'Marraskuu 2024', 'Joulukuu 2024', 'Tammikuu 2025'],
             datasets: [{
                 label: 'Kuukausittainen tilanne',
-                data: [1100, 900, 600, 500, 420],
+                data: [1100, 900, 600, -200, 920],
                 backgroundColor: '#3c8dbc'
             }]
         },
