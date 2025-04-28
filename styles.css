@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #b5c6e4;
+    background: #bad2fc;
     padding: 2px 12px;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 section {
-    background: rgb(255, 255, 255);
+    background: rgb(228, 234, 248);
     padding: 0px 20%;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
@@ -44,13 +44,20 @@ section {
 
 button {
     display: block;
-    background-color: #8f7ace;
+    background-color: #3d3bb4;
     color: white;
     padding: 8px 12px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin: 10px auto 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 h2 {
@@ -90,3 +97,4 @@ li {
     align-items: center;
     justify-content: space-between;
 }
+
