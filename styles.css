@@ -137,3 +137,31 @@ li {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+
+.top-bar-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #bad2fc;
+    padding: 8px 20px;
+    height: 40px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;              
+    width: 300px;           
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

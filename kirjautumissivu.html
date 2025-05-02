@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirjautumissivu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar-login">
+            <h1>Taloudenseurantaohjelma</h1>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <form id="login-form" action="taloudenseurantaohjelma.html" method="post">
+            <h2>Kirjaudu sisään</h2>
+            <label for="email">Sähköposti:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Kirjaudu sisään</button>
+
+            <h2>Tai</h2>
+        </form>
+    </main>
+</html>
