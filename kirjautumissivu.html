@@ -17,15 +17,22 @@
     <main class="login-container">
         <form id="login-form" action="taloudenseurantaohjelma.html" method="post">
             <h2>Kirjaudu sisään</h2>
-            <label for="email">Sähköposti:</label>
             <input type="text" id="email" name="email" required>
+            <label for="email">Sähköposti</label>
 
-            <label for="password">Salasana:</label>
             <input type="password" id="password" name="password" required>
+            <label for="password">Salasana</label>
 
             <button type="submit">Kirjaudu sisään</button>
 
             <h2>Tai</h2>
+
+            <button class="google-button" type="button" onclick="window.location.href='taloudenseurantaohjelma.html'">
+                <img src="google-logo.png" alt="Google logo" width="40" height="40">
+                <span>Jatka Google-tunnuksilla</span>
+            </button>
+            <a href="#">Luo uusi käyttäjä</a>
+            <a href="#">Unohditko salasanan?</a>
         </form>
     </main>
 </html>

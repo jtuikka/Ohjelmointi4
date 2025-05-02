@@ -130,7 +130,7 @@ li {
 }
 
 .dropdown-content a {
-    color: black;
+    color: #333;
     padding: 12px 8px;
     text-decoration: none;
     display: block;
@@ -164,4 +164,35 @@ li {
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.google-button {
+    background-color: #d3d2d2;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #969696;
+    border-radius: 4px;
+}
+
+a {
+    display: block;
+    color: #333;
+    font-size: medium;
+    text-align: center;
+    padding-top: 10px;
 }
