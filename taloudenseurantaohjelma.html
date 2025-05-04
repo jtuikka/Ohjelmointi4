@@ -6,61 +6,102 @@
     <title>Taloudenseurantaohjelma</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <div class="dropdown">
-                <button class="dropdown-button">Valitse kuukausi ▼</button>
-                <div class="dropdown-content">
-                    <a href="#">Tammikuu 2025</a>
-                    <a href="#">Joulukuu 2024</a>
-                    <a href="#">Marraskuu 2024</a>
-                    <a href="#">Lokakuu 2024</a>
-                    <a href="#">Syyskuu 2024</a>
-                    <a href="#">Elokuu 2024</a>
-                    <a href="#">Heinäkuu 2024</a>
-                    <a href="#">Kesäkuu 2024</a>
-                    <a href="#">Toukokuu 2024</a>
-                    <a href="#">Huhtikuu 2024</a>
-                    <a href="#">Maaliskuu 2024</a>
-                    <a href="#">Helmikuu 2024</a>
-                </div>
+      <div class="top-bar">
+        <div class="dropdown">
+            <button class="dropdown-button">Valitse kuukausi ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Tammikuu 2025</a>
+                <a href="#">Joulukuu 2024</a>
+                <a href="#">Marraskuu 2024</a>
+                <a href="#">Lokakuu 2024</a>
+                <a href="#">Syyskuu 2024</a>
+                <a href="#">Elokuu 2024</a>
+                <a href="#">Heinäkuu 2024</a>
+                <a href="#">Kesäkuu 2024</a>
+                <a href="#">Toukokuu 2024</a>
+                <a href="#">Huhtikuu 2024</a>
+                <a href="#">Maaliskuu 2024</a>
+                <a href="#">Helmikuu 2024</a>
             </div>
-            <h1>Taloudenseurantaohjelma</h1>
-            <button class="icon-button">👤</button>
         </div>
+        <h1>Taloudenseurantaohjelma</h1>
+        <button class="icon-button">👤</button>
+    </div>
     </header>
 
+    <!--Tulot osio-->
     <main class="grid-container">
         <section class="income">
           <h2>Kuukauden tulot</h2>
-          <ul>
-            <li><span>2500€</span> Palkka <button class="icon-button">✎</button></li>
-            <li><span>20€</span> Muu <button class="icon-button">✎</button></li>
+          <ul id="tuloLista">
           </ul>
-          <button>Lisää tulo</button>
+          <button id="openModal">Lisää tulo</button>
+
+        <!--Tulojen popup ikkuna-->  
+        <div class="modal" id="modal">
+          <div class="modal-inner">
+            <h2>Lisää tulo</h2>
+            <form id="tuloForm">
+              <label for="tuloMaara">Summa</label>
+              <input type="number" id="tuloMaara" required><br>
+
+              <label for="tuloKategoria">Kategoria</label>
+              <select id="tuloKategoria" required>
+                <option value="Palkka">Palkka</option>
+                <option value="Muu">Muu</option>
+              </select>
+              <div class="modal-buttons">
+                <button type="button" id="closeModal">Peruuta</button>
+                <button type="submit">OK</button>
+            </div>
+            </form>
+          </div>
+        </div>
         </section>
-    
+        </div>
+
+        <!--Menot osio-->
         <section class="expenses">
           <h2>Kuukauden menot</h2>
-          <ul>
-            <li><span>630€</span> Vuokra <button class="icon-button">✎</button></li>
-            <li><span>220€</span> Ruoka <button class="icon-button">✎</button></li>
-            <li><span>200€</span> Laskut <button class="icon-button">✎</button></li>
-            <li><span>50€</span> Harrastus <button class="icon-button">✎</button></li>
-            <li><span>300€</span> Auto <button class="icon-button">✎</button></li>
-            <li><span>200€</span> Muu <button class="icon-button">✎</button></li>
+          <ul id="menoLista">
           </ul>
-          <button>Lisää meno</button>
+          <button id="avaaMenoModal">Lisää meno</button>
+
+          <!--Menojen popup-->
+          <div class="modal" id="menoModal">
+            <div class="modal-inner">
+              <h2>Lisää meno</h2>
+              <form id="menoForm">
+              <label for="menoMaara">Summa</label>
+              <input type="number" id="menoMaara" required><br>
+
+              <label for="menoKategoria">Kategoria</label>
+              <select id="menoKategoria" required>
+                <option value="Sahkolasku">Sahkolasku</option>
+                <option value="Vesilasku">Vesilasku</option>
+                <option value="Vuokra">Vuokra</option>
+                <option value="Harrastus">Harrastus</option>
+                <option value="Ruoka">Ruoka</option>
+                <option value="Muu">Muu</option>
+              </select>
+              <div class="modal-buttons">
+                <button type="button" id="suljeMenoModal">Peruuta</button>
+                <button type="submit">OK</button>
+              </div>
+            </form>
+            </div>
+          </div>
         </section>
-    
+
+    <!--YHTEENVETO-->
         <section class="summary">
           <h2>Yhteenveto</h2>
-          <p>Tulot: 2520€</p>
-          <p>Menot: 1600€</p>
-          <p>Kuun tilanne: <strong style="color: green;">+920€</strong></p>
+          <p id="tuloTotal">Tulot: </p>
+          <p id="expenseTotal">Menot: </p>
+          <p id="balance">Kuun tilanne: <strong></strong></p>
           <canvas id="pieChart"></canvas>
         </section>
     </main>
@@ -69,7 +110,7 @@
           <h2>Säästötavoitteet</h2>
           <div class="goal-bar">
             <span>Uusi auto <button class="icon-button">+</button></span>
-            <progress value="2800" max="4200"></progress>
+            <progress value="2100" max="4200"></progress>
           </div>
           <button>Lisää säästötavoite</button>
         </section>
