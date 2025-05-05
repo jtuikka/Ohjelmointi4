@@ -225,18 +225,76 @@ a {
     opacity: 1;
     z-index: 999;
   }
+  
   .modal-inner {
     background-color: #b5c6e4;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
     text-align: center;
+    padding-top: 8px;
   }
-  .modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+
+  .modal-inner h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
   }
+
+.modal-buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    min-width: 100px;
+  }
+
+#tuloForm,
+#menoForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 8px 20px;
+  grid-template-areas:
+    "summa-lab luokka-lab"
+    "summa-in  luokka-in"
+    "buttons   buttons";
+}
+
+#tuloForm label[for="tuloMaara"],
+#menoForm label[for="menoMaara"] {
+  grid-area: summa-lab;
+}
+
+#tuloForm label[for="tuloKategoria"],
+#menoForm label[for="menoKategoria"] {
+  grid-area: luokka-lab;
+}
+
+#tuloForm input#tuloMaara,
+#menoForm input#menoMaara {
+  grid-area: summa-in;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 4px 0;
+}
+
+#tuloForm select#tuloKategoria,
+#menoForm select#menoKategoria {
+  grid-area: luokka-in;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+#tuloForm .modal-buttons,
+#menoForm .modal-buttons {
+  grid-area: buttons;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+  
   
 
