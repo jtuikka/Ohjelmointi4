@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   let totalTulo = 0; //kokonaisTulo asetetaan nollaan
   
-  
   // "Lisää tulo" painike aukaisee popupin
   openBtn.addEventListener("click", () => {
     modal.classList.add("open");
@@ -200,7 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
 //Menun avaaminen ja sulkeminen
 function toggleMenu() {
-  const menu = document.getElementById('hamburger-content');
+  const menu = document.getElementById('profile-content');
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
   
+// Lisää säästö painike popup
+avaaSaastoModal.addEventListener('click', () => {
+  saastoModal.classList.add('open');
+});
+
+// sulkee popupin
+suljeSaastoModal.addEventListener('click', () => {
+  saastoModal.classList.remove('open');
+  saastoForm.reset();
+});

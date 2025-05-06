@@ -155,11 +155,11 @@ button:active {
     display: block;
 }
 
-.hamburger-menu {
+.profile-menu {
     position: relative;
   }
 
-  .hamburger-content {
+  .profile-content {
     display: none;
     position: fixed;
     top: 0;
@@ -171,7 +171,7 @@ button:active {
     z-index: 1000;
   }
 
-  .hamburger-content a {
+  .profile-content a {
     color: #333;
     padding: 12px 8px;
     text-decoration: none;
@@ -367,5 +367,13 @@ a {
   margin-top: 10px;
 }
   
-  
+.modal input[type="number"] {
+    
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #969696;
+    border-radius: 4px;
+ 
+}
 

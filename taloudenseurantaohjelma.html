@@ -8,8 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <!--Top bar-->
     <header>
       <div class="top-bar">
+        <!--dropdown menu-->
         <div class="dropdown">
             <button class="dropdown-button">Tammikuu 2025 ▼</button>
             <div class="dropdown-content">
@@ -27,10 +29,11 @@
                 <a href="#">Helmikuu 2024</a>
             </div>
         </div>
+        <!--profile menu-->
         <h1>Taloudenseurantaohjelma</h1>
-        <div class="hamburger-menu" id="hamburger-menu">
+        <div class="profile-menu" id="profile-menu">
             <button class="icon-button" onclick="toggleMenu()">👤</button>
-            <div class="hamburger-content" id="hamburger-content">
+            <div class="profile-content" id="profile-content">
               <div class="menu-header">
                 <button class="back-arrow" onclick="toggleMenu()">⬅</button>
                 <h2>Pasi</h2>
@@ -130,8 +133,24 @@
         <section class="savings">
           <h2>Säästötavoitteet</h2>
           <div class="goal-bar">
-            <span>Uusi auto <button class="icon-button">+</button></span>
-            <progress value="2100" max="4200"></progress>
+            <span>Uusi auto 
+              <button class="icon-button" id="avaaSaastoModal">+</button>
+              <!--Säästötavoite popup-->
+              <div class="modal" id="saastoModal">
+                <div class="modal-inner">
+                  <h2>Uusi auto <button class="icon-button">🗑️</button></h2>
+                  <form id="saastoForm">
+                  <label for="saastoMaara">Lisää rahaa säästöön:</label>
+                  <input type="number" id="saastoMaara" required><br>
+                  <div class="modal-buttons">
+                    <button type="submit">Tallenna</button>
+                    <button type="button" id="suljeSaastoModal">Peruuta</button> 
+                  </div>
+                </form>
+                </div>
+              </div>
+            </span>
+            <progress value="2500" max="4200"></progress>
           </div>
           <button>Lisää säästötavoite</button>
         </section>
