@@ -11,7 +11,7 @@
     <header>
       <div class="top-bar">
         <div class="dropdown">
-            <button class="dropdown-button">Valitse kuukausi ▼</button>
+            <button class="dropdown-button">Tammikuu 2025 ▼</button>
             <div class="dropdown-content">
                 <a href="#">Tammikuu 2025</a>
                 <a href="#">Joulukuu 2024</a>
@@ -28,7 +28,24 @@
             </div>
         </div>
         <h1>Taloudenseurantaohjelma</h1>
-        <button class="icon-button">👤</button>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <button class="icon-button" onclick="toggleMenu()">👤</button>
+            <div class="hamburger-content" id="hamburger-content">
+              <div class="menu-header">
+                <button class="back-arrow" onclick="toggleMenu()">⬅</button>
+                <h2>Pasi</h2>
+                <div class="profile-picture">
+                  <img src="default-avatar-profile-icon.jpg" alt="Profile picture">
+                </div>
+              </div>
+                <a href="#">Asetukset</a>
+                <a href="#">Lisää käyttäjä talouteen</a>
+                <a href="#">Tuki</a>
+                <div class="log-out">
+                  <button onclick="window.location.href='kirjautumissivu.html'">Kirjaudu ulos</button>
+                </div>
+            </div>
+        </div>
     </div>
     </header>
 
@@ -51,6 +68,8 @@
               <label for="tuloKategoria">Kategoria</label>
               <select id="tuloKategoria" required>
                 <option value="Palkka">Palkka</option>
+                <option value="Pääomatulo">Pääomatulo</option>
+                <option value="Bonukset">Bonukset</option>
                 <option value="Muu">Muu</option>
               </select>
               <div class="modal-buttons">
@@ -105,6 +124,8 @@
           <canvas id="pieChart"></canvas>
         </section>
     </main>
+
+    <!--SÄÄSTÖTAVOITE-->
     <main class="grid-container">
         <section class="savings">
           <h2>Säästötavoitteet</h2>
@@ -115,6 +136,7 @@
           <button>Lisää säästötavoite</button>
         </section>
     
+        <!--Kuukausittainen yhteenveto-->
         <section class="monthly-summary">
           <h2>Kuukausittainen yhteenveto</h2>
           <canvas id="barChart"></canvas>

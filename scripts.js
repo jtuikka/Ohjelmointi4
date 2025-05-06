@@ -198,4 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
   
+//Menun avaaminen ja sulkeminen
+function toggleMenu() {
+  const menu = document.getElementById('hamburger-content');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
   
