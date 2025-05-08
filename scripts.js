@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // "Lisää tulo" painike aukaisee popupin
   openBtn.addEventListener("click", () => {
     modal.classList.add("open");
+
+    
   });
   
   // sulkee popupin
@@ -81,6 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tuloForm.reset();
     modal.classList.remove('open');
+
+     // Säästö-popup muuttujat
+  const avaaSaastoModal = document.getElementById('avaaSaastoModal');
+  const suljeSaastoModal = document.getElementById('suljeSaastoModal');
+  const saastoModal = document.getElementById('saastoModal');
+  const saastoForm = document.getElementById('saastoForm');
+
+  // Lisää säästö painike popup
+  avaaSaastoModal.addEventListener('click', () => {
+    saastoModal.classList.add('open');
+  });
+
+  // sulkee popupin
+  suljeSaastoModal.addEventListener('click', () => {
+    saastoModal.classList.remove('open');
+    saastoForm.reset();
+  });
 });
   
   //meno muuttujat
@@ -203,13 +222,3 @@ function toggleMenu() {
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
   
-// Lisää säästö painike popup
-avaaSaastoModal.addEventListener('click', () => {
-  saastoModal.classList.add('open');
-});
-
-// sulkee popupin
-suljeSaastoModal.addEventListener('click', () => {
-  saastoModal.classList.remove('open');
-  saastoForm.reset();
-});
