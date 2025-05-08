@@ -1,3 +1,4 @@
+/*Yleinen*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     line-height: 1.5;
 }
 
+/*Yläpalkin tyylittely*/
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -16,6 +18,7 @@ body {
     padding: 8px 20px;
 }
 
+/*Gridi*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -30,6 +33,7 @@ body {
     }
 }
 
+/*Sivun sisältö*/
 section {
     background: rgb(255, 255, 255);
     padding: 0px 20%;
@@ -43,6 +47,7 @@ section {
     }
 }
 
+/*Nappien perustyyli*/
 button {
     display: block;
     background-color: #5045ee;
@@ -54,6 +59,7 @@ button {
     margin: 10px auto 0;
 }
 
+/*Otsikko*/
 h1 {
     color: #333;
     font-size: 28px;
@@ -64,6 +70,7 @@ h1 {
     transform: translateX(-50%);
 }
 
+/*Pienempi otsikko*/
 h2 {
     color: #333;
     font-size: 24px;
@@ -71,6 +78,7 @@ h2 {
     text-align: center;
 }
 
+/*Tavoitepalkki*/
 .goal-bar {
     width: 100%;
     max-width: 800px;
@@ -80,11 +88,13 @@ h2 {
     margin-right: auto;
 }
 
+/*Tavoitepalkin sisältö*/
 .goal-bar progress {
     width: 100%;
     height: 50px;
 }
 
+/*Ikoninappi*/
 .icon-button {
     background: none;
     border: none;
@@ -105,6 +115,8 @@ li {
 button:active {
     opacity: 0.8;
 }
+
+/*Pudotusvalikkonäppäin*/
 .dropdown-button {
     background: none;
     color: #333;
@@ -116,11 +128,13 @@ button:active {
     margin: 0px auto 0;
 }
 
+/*Pudotusvalikko*/
 .dropdown {
     position: relative;
     display: inline-block;
   }
 
+/*Pudotusvalikon sisältö*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -132,6 +146,7 @@ button:active {
     z-index: 1;
 }
 
+/*Sisällön tyylittely*/
 .dropdown-content a {
     color: #333;
     padding: 12px 8px;
@@ -141,12 +156,14 @@ button:active {
 
 .dropdown:hover .dropdown-content {display: block;}
 
+/*Profiilikuvan tyylittely*/
 .profile-picture {
     width: 50px;
     height: 50px;
     margin-right: 10px;
 }
 
+/*Itse kuvan tyylittely*/
 .profile-picture img {
     width: 100%;
     height: 100%;
@@ -159,6 +176,7 @@ button:active {
     position: relative;
   }
 
+ /*Profiilivalikon sisältö*/ 
   .profile-content {
     display: none;
     position: fixed;
@@ -171,6 +189,7 @@ button:active {
     z-index: 1000;
   }
 
+  /*Sisällön tyylittely*/
   .profile-content a {
     color: #333;
     padding: 12px 8px;
@@ -178,6 +197,7 @@ button:active {
     display: block;
 }
 
+/*Menun otsikko*/
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -186,6 +206,7 @@ button:active {
     background-color: #bad2fc;
   }
 
+  /*Paluunäppäimen tyyli*/
   .back-arrow {
     font-size: 24px;
     cursor: pointer;
@@ -194,11 +215,13 @@ button:active {
     color: #333;
   }
 
+  /*Menu otsikon tyyli*/
 .menu-header h2 {
     margin: 10px 10px;
     font-size: 20px;
 }
 
+/*Uloskirjautumisnäppäin*/
 .log-out button {
   text-decoration: none;
   color: #ff0000;
@@ -213,6 +236,7 @@ button:active {
     width: 100%;
 }
 
+/*Yläpalkki kirjautumissivulla*/
 .top-bar-login {
     display: flex;
     justify-content: space-between;
@@ -223,12 +247,14 @@ button:active {
     height: 40px;
 }
 
+/*Kirjautumissivun sisältö*/
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*Kirjautumislomake tyyli*/
 #login-form {
     display: flex;
     flex-direction: column; 
@@ -240,6 +266,7 @@ button:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/*Google nappi*/
 .google-button {
     background-color: #d3d2d2;
     color: #333;
@@ -255,6 +282,7 @@ button:active {
     justify-content: center;
 }
 
+/*Syöttölaatikko*/
 input {
     width: 100%;
     padding: 10px;
@@ -263,6 +291,7 @@ input {
     border-radius: 4px;
 }
 
+/*Kirjautumissivun muut vaihtoehdot*/
 a {
     display: block;
     color: #333;
@@ -284,6 +313,7 @@ a {
     align-items: center;
   }
 
+  /*modal*/
   .modal {
     opacity: 0;
     z-index: -1;
@@ -297,6 +327,7 @@ a {
     z-index: 999;
   }
   
+  /*modalin sisältö*/
   .modal-inner {
     background-color:  rgb(228, 234, 248);;
     border-radius: 10px;
@@ -306,17 +337,21 @@ a {
     padding-top: 8px;
   }
 
+  /*modalin otsikko*/
   .modal-inner h2 {
     margin-top: 0;
     margin-bottom: 16px;
   }
 
+  /*modalin nappi*/
 .modal-buttons button {
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 8px;
     min-width: 100px;
   }
+
+/*modaleiden muut tyylittelyt*/
 
 #tuloForm,
 #menoForm {
